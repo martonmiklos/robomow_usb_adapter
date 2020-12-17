@@ -1,5 +1,9 @@
 ## FT231x based converter to RJ11 connector
 
+![Board top view](https://raw.githubusercontent.com/martonmiklos/robomow_usb_adapter/master/docs/top.png)
+
+Size: 42.44 x 17.78 mm
+
 The board has two variants:
 
 ### Robomow interface for RM-5xx series 
