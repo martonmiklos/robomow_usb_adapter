@@ -7510,7 +7510,7 @@ DIN A4, landscape with location and doc. field</description>
 </attributes>
 <variantdefs>
 <variantdef name="ROBOMOW"/>
-<variantdef name="SORENSEN" current="yes"/>
+<variantdef name="SORENSEN"/>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.2032" drill="0">
