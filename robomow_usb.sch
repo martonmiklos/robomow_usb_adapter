@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7560,7 +7560,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="LED1" library="dp_devices" deviceset="LED" device="-0603"/>
+<part name="PWR" library="dp_devices" deviceset="LED" device="-0603"/>
 <part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="470">
 <attribute name="OC_TME" value="0603SAF1001T5E"/>
 </part>
@@ -7600,6 +7600,14 @@ DIN A4, landscape with location and doc. field</description>
 <variant name="ROBOMOW" populate="no"/>
 </part>
 <part name="FRAME1" library="martonmiklos" deviceset="A4L-LOC" device=""/>
+<part name="RX" library="dp_devices" deviceset="LED" device="-0603"/>
+<part name="R13" library="rcl" deviceset="R-EU_" device="R0603" value="470">
+<attribute name="OC_TME" value="0603SAF1001T5E"/>
+</part>
+<part name="TX" library="dp_devices" deviceset="LED" device="-0603"/>
+<part name="R14" library="rcl" deviceset="R-EU_" device="R0603" value="470">
+<attribute name="OC_TME" value="0603SAF1001T5E"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -7671,7 +7679,7 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="VALUE" x="88.9" y="81.28" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="IC1" gate="G$1" x="132.08" y="50.8" smashed="yes">
-<attribute name="NAME" x="130.81" y="68.58" size="1.778" layer="95" align="center-left"/>
+<attribute name="NAME" x="132.334" y="67.31" size="1.778" layer="95" align="bottom-center"/>
 <attribute name="VALUE" x="120.65" y="35.56" size="1.778" layer="96" align="center-left"/>
 </instance>
 <instance part="P+1" gate="G$1" x="157.48" y="68.58" smashed="yes">
@@ -7693,7 +7701,7 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="P+2" gate="G$1" x="177.8" y="68.58" smashed="yes">
 <attribute name="VALUE" x="176.784" y="72.136" size="1.778" layer="96"/>
 </instance>
-<instance part="LED1" gate="LED" x="48.26" y="86.36" smashed="yes">
+<instance part="PWR" gate="LED" x="48.26" y="86.36" smashed="yes">
 <attribute name="NAME" x="51.308" y="85.344" size="1.27" layer="95" font="vector" ratio="10"/>
 <attribute name="VALUE" x="53.975" y="81.788" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -7757,6 +7765,24 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="SHEET" x="230.505" y="5.08" size="2.54" layer="94" font="vector"/>
 <attribute name="SHEET_HEADLINE" x="162.56" y="20.32" size="1.778" layer="94" font="vector"/>
 </instance>
+<instance part="RX" gate="LED" x="33.02" y="86.36" smashed="yes">
+<attribute name="NAME" x="36.068" y="85.344" size="1.27" layer="95" font="vector" ratio="10"/>
+<attribute name="VALUE" x="38.735" y="81.788" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R13" gate="G$1" x="33.02" y="99.06" smashed="yes" rot="R270">
+<attribute name="NAME" x="36.83" y="100.5586" size="1.27" layer="95" font="vector" ratio="10"/>
+<attribute name="VALUE" x="36.83" y="98.298" size="1.27" layer="96" font="vector" ratio="10"/>
+<attribute name="OC_TME" x="33.02" y="99.06" size="1.778" layer="96" rot="R270" display="off"/>
+</instance>
+<instance part="TX" gate="LED" x="20.32" y="86.36" smashed="yes">
+<attribute name="NAME" x="23.368" y="85.344" size="1.27" layer="95" font="vector" ratio="10"/>
+<attribute name="VALUE" x="26.035" y="81.788" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R14" gate="G$1" x="20.32" y="99.06" smashed="yes" rot="R270">
+<attribute name="NAME" x="24.13" y="100.5586" size="1.27" layer="95" font="vector" ratio="10"/>
+<attribute name="VALUE" x="24.13" y="98.298" size="1.27" layer="96" font="vector" ratio="10"/>
+<attribute name="OC_TME" x="20.32" y="99.06" size="1.778" layer="96" rot="R270" display="off"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7818,7 +7844,7 @@ DIN A4, landscape with location and doc. field</description>
 </segment>
 <segment>
 <wire x1="48.26" y1="76.2" x2="48.26" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="LED" pin="C"/>
+<pinref part="PWR" gate="LED" pin="C"/>
 <wire x1="48.26" y1="78.74" x2="48.26" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
@@ -7962,6 +7988,18 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="139.7" y1="144.78" x2="129.54" y2="144.78" width="0.1524" layer="91"/>
 <label x="129.54" y="144.78" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="33.02" y1="104.14" x2="33.02" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="106.68" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
+<label x="35.56" y="106.68" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="104.14" x2="20.32" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="106.68" x2="22.86" y2="106.68" width="0.1524" layer="91"/>
+<label x="22.86" y="106.68" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
 </net>
 <net name="FTDI_TX" class="0">
 <segment>
@@ -7999,7 +8037,7 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="VIN_LED_R1" class="0">
 <segment>
-<pinref part="LED1" gate="LED" pin="A"/>
+<pinref part="PWR" gate="LED" pin="A"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="48.26" y1="88.9" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
 </segment>
@@ -8027,12 +8065,24 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="149.86" y1="55.88" x2="160.02" y2="55.88" width="0.1524" layer="91"/>
 <label x="160.02" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
+<segment>
+<wire x1="33.02" y1="76.2" x2="33.02" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="RX" gate="LED" pin="C"/>
+<wire x1="33.02" y1="78.74" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
+<label x="33.02" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="!TXLED" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="CBUS2"/>
 <wire x1="114.3" y1="40.64" x2="106.68" y2="40.64" width="0.1524" layer="91"/>
 <label x="106.68" y="40.64" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="20.32" y1="76.2" x2="20.32" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="TX" gate="LED" pin="C"/>
+<wire x1="20.32" y1="78.74" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
+<label x="20.32" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="RS485_A" class="0">
@@ -8149,6 +8199,20 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="198.12" y1="137.16" x2="198.12" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="134.62" x2="198.12" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN_LED_R2" class="0">
+<segment>
+<pinref part="RX" gate="LED" pin="A"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="88.9" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN_LED_R3" class="0">
+<segment>
+<pinref part="TX" gate="LED" pin="A"/>
+<pinref part="R14" gate="G$1" pin="2"/>
+<wire x1="20.32" y1="88.9" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
