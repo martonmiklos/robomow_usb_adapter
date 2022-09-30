@@ -7844,12 +7844,18 @@ DIN A4, landscape with location and doc. field</description>
 <sheets>
 <sheet>
 <plain>
+<<<<<<< HEAD
 <text x="40.64" y="167.64" size="1.27" layer="91" font="vector" align="bottom-center">Sorensen DLM series
 RS-485 pinout</text>
 <text x="71.628" y="161.798" size="1.27" layer="91" font="vector">RS-485 T+</text>
 <text x="71.628" y="151.638" size="1.27" layer="91" font="vector">RS-485 R+</text>
 <text x="71.628" y="144.018" size="1.27" layer="91" font="vector">RS-485 T-</text>
 <text x="71.628" y="136.398" size="1.27" layer="91" font="vector">RS-485 R-</text>
+=======
+<text x="132.08" y="99.06" size="1.27" layer="91" font="vector">For Robomow
+use cross cable
+(1-6, 2-5, 3-4...61)</text>
+>>>>>>> 2056602 (Pimp readme)
 </plain>
 <instances>
 <instance part="JUSB" gate="G$1" x="33.02" y="50.8" smashed="yes" rot="MR0">

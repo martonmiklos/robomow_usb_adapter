@@ -13,6 +13,9 @@ The board has two variants:
 
 Normal UART 5V operation for used with Robomow RM toolkit
 
+Pinout:
+![Robomow RM series RJ10 pinout](https://raw.githubusercontent.com/martonmiklos/robomow_usb_adapter/master/robomow_pinout.png)
+
 ### RS-485 adapter for Sorensen/Ametek DLM series power supplies
 
 For communicating Sorensen DLM series power supplies via RS-485
