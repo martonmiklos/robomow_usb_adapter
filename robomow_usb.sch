@@ -7840,22 +7840,20 @@ DIN A4, landscape with location and doc. field</description>
 <part name="R15" library="martonmiklos" deviceset="R_POPOP" device="0603"/>
 <part name="P+3" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+4" library="supply1" deviceset="VUSB" device=""/>
+<part name="R16" library="rcl" deviceset="R-EU_" device="R0603" value="0"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<<<<<<< HEAD
 <text x="40.64" y="167.64" size="1.27" layer="91" font="vector" align="bottom-center">Sorensen DLM series
 RS-485 pinout</text>
 <text x="71.628" y="161.798" size="1.27" layer="91" font="vector">RS-485 T+</text>
 <text x="71.628" y="151.638" size="1.27" layer="91" font="vector">RS-485 R+</text>
 <text x="71.628" y="144.018" size="1.27" layer="91" font="vector">RS-485 T-</text>
 <text x="71.628" y="136.398" size="1.27" layer="91" font="vector">RS-485 R-</text>
-=======
 <text x="132.08" y="99.06" size="1.27" layer="91" font="vector">For Robomow
 use cross cable
 (1-6, 2-5, 3-4...61)</text>
->>>>>>> 2056602 (Pimp readme)
 </plain>
 <instances>
 <instance part="JUSB" gate="G$1" x="33.02" y="50.8" smashed="yes" rot="MR0">
@@ -8043,6 +8041,10 @@ use cross cable
 </instance>
 <instance part="P+4" gate="G$1" x="104.14" y="165.1" smashed="yes">
 <attribute name="VALUE" x="104.14" y="166.37" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="R16" gate="G$1" x="93.98" y="111.76" smashed="yes" rot="R180">
+<attribute name="NAME" x="97.79" y="110.2614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="97.79" y="115.062" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -8437,8 +8439,10 @@ use cross cable
 <net name="RJ11_1" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="109.22" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
-<label x="106.68" y="109.22" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="114.3" y1="109.22" x2="111.76" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="109.22" x2="111.76" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="121.92" x2="99.06" y2="121.92" width="0.1524" layer="91"/>
+<label x="99.06" y="121.92" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -8449,8 +8453,11 @@ use cross cable
 <net name="RJ11_2" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="114.3" y1="106.68" x2="106.68" y2="106.68" width="0.1524" layer="91"/>
-<label x="106.68" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="114.3" y1="106.68" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="106.68" x2="109.22" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="119.38" x2="106.68" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="119.38" x2="99.06" y2="119.38" width="0.1524" layer="91"/>
+<label x="99.06" y="119.38" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
@@ -8516,6 +8523,27 @@ use cross cable
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <label x="203.2" y="78.74" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="FTDI_DTR" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="DTR#"/>
+<wire x1="114.3" y1="63.5" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
+<label x="106.68" y="63.5" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="111.76" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
+<label x="86.36" y="111.76" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="111.76" x2="104.14" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="3"/>
+<wire x1="104.14" y1="104.14" x2="114.3" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
