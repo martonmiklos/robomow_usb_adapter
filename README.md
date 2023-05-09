@@ -11,7 +11,12 @@ The board has two variants:
 
 ### Robomow interface for RM-5xx series 
 
-Normal UART 5V operation for used with Robomow RM toolkit
+Normal UART 5V operation for used with Robomow RM toolkit.
+
+You need to invert the both TX and RX lines with the [FT_Prog](https://ftdichip.com/utilities/#ft_prog).
+
+![Invert TX RX in FT Prog](https://raw.githubusercontent.com/martonmiklos/robomow_usb_adapter/master/docs/FProg_3.gif)
+
 
 Pinout:
 ![Robomow RM series RJ10 pinout](https://raw.githubusercontent.com/martonmiklos/robomow_usb_adapter/master/robomow_pinout.png)
