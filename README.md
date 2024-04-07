@@ -7,6 +7,9 @@ Size: 42.44 x 17.78 mm
 
 Drawn in EAGLE 9.x
 
+Warning pozor!! The TX/RX is swapped in the board in the repo, however I stopped using EAGLE and it is not likely, that I am going to fix it.
+At some point I might recreate the design in Kicad.
+
 The board has two variants:
 
 ### Robomow interface for RM-5xx series 
